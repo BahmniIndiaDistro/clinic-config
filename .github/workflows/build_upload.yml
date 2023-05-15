@@ -39,7 +39,7 @@ jobs:
           file: package/docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: bhamni-hwc/clinic-config:${{env.ARTIFACT_VERSION}},bhamni-hwc/clinic-config:latest
+          tags: bahmni-hwc/clinic-config:${{env.ARTIFACT_VERSION}},bahmni-hwc/clinic-config:latest
 
 #      - name: Pull Bahmni Default Config Helm Chart
 #        run: |
@@ -75,11 +75,11 @@ jobs:
 #        working-directory: helm-charts/
 #        run: helm repo index --merge index.yaml --url https://bahmniindiadistro.github.io/helm-charts/  .
 #
-#      - name: Helm - Publish Chart
-#        working-directory: helm-charts/
-#        run: |
+      - name: Helm - Publish Chart
+        working-directory: helm-charts/
+        run: |
 #          git config user.name ${{ secrets.BAHMNI_USERNAME}}
 #          git config user.email ${{ secrets.BAHMNI_EMAIL}}
-#          git add .
-#          git commit -m "Release of clinic-config-${{ env.ARTIFACT_VERSION }}"
-#          git push 'https://${{ secrets.BAHMNI_USERNAME}}:${{ secrets.BAHMNI_PAT}}@github.com/bahmniindiadistro/helm-charts.git' gh-pages
+          git add .
+          git commit -m "Release of clinic-config-${{ env.ARTIFACT_VERSION }}"
+          git push 'https://${{ secrets.BAHMNI_USERNAME}}:${{ secrets.BAHMNI_PAT}}@github.com/bahmni-hwc/helm-charts.git' gh-pages
