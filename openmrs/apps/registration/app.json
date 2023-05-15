@@ -14,7 +14,7 @@
         "defaultIdentifierPrefix": "ABC",
         "showMiddleName": true,
         "showLastName": true,
-        "defaultVisitType":"OPD",
+        "defaultVisitType":"OPD New",
         "isLastNameMandatory": true,
         "patientNameDisplayOrder": ["firstName", "middleName", "lastName"],
         "showSaveConfirmDialog": false,

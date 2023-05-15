@@ -7,8 +7,8 @@
             "sqlPath": "/etc/bahmni_config/openmrs/apps/reports/sql/clinicVisits.sql"
         }
     },
-    "OPD/EmergencyVisitCount": {
-        "name": "OPD/Emergency Visit Count",
+    "OPDVisitCount": {
+        "name": "OPD Visit Count",
         "type": "MRSGeneric",
         "requiredPrivilege": "app:reports",
         "config": {
