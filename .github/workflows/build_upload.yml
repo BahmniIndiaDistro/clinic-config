@@ -2,8 +2,8 @@ name: Build and Upload
 on:
   push:
     branches:
-      - main
-      - 'release-*'
+      - BAH-100
+      #- 'release-*'
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
     paths-ignore:
@@ -39,7 +39,7 @@ jobs:
           file: package/docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: bahmniindiadistro/clinic-config:${{env.ARTIFACT_VERSION}},bahmniindiadistro/clinic-config:latest
+          tags: Bhamni-HWC/clinic-config:${{env.ARTIFACT_VERSION}},Bhamni-HWC/clinic-config:latest
       - name: Pull Bahmni Default Config Helm Chart
         run: |
           helm pull default-config --repo https://bahmni.github.io/helm-charts --devel --untar --untardir package/helm
