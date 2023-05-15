@@ -39,7 +39,7 @@ jobs:
           file: package/docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: bahmni-hwc/clinic-config:${{env.ARTIFACT_VERSION}},bahmni-hwc/clinic-config:latest
+          tags: bahmnihwc/clinic-config:${{env.ARTIFACT_VERSION}},bahmnihwc/clinic-config:latest
 
 #      - name: Pull Bahmni Default Config Helm Chart
 #        run: |
