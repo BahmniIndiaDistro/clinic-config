@@ -50,8 +50,7 @@
             }
         },
         "addressHierarchy": {
-            "showAddressFieldsTopDown": false,
-            "strictAutocompleteFromLevel": "postalCode"
+            "showAddressFieldsTopDown": true
         }
     }
 }
