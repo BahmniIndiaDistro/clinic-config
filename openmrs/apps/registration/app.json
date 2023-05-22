@@ -9,6 +9,7 @@
         }
     ],
     "config" : {
+        "prepopulateFields" : ["State", "District", "Sub District", "City/Village"],
         "mandatoryPersonAttributes" : ["phoneNumber"],
         "patientInformation": {},
         "defaultIdentifierPrefix": "ABC",
@@ -50,8 +51,7 @@
             }
         },
         "addressHierarchy": {
-            "showAddressFieldsTopDown": false,
-            "strictAutocompleteFromLevel": "postalCode"
+            "showAddressFieldsTopDown": true
         }
     }
 }
