@@ -5,7 +5,7 @@ SELECT DISTINCT
 	 TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) AS "Age",
 	 p.gender AS 'Gender',
 	 pMobile.phoneNumber AS 'Phone Number',
-     DATE_FORMAT(CONVERT_TZ(start_date_time,'+00:00','+5:30'), "%d/%m/%Y %h:%i %p") AS 'Appointment Time'
+     DATE_FORMAT(start_date_time, "%d/%m/%Y %h:%i %p") AS 'Appointment Time'
 FROM patient_appointment pa
    JOIN appointment_service app_service
     ON app_service.appointment_service_id = pa.appointment_service_id AND app_service.voided IS FALSE
