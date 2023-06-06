@@ -297,11 +297,24 @@ angular.module('bahmni.common.displaycontrol.custom')
                         if (observationsValue.length > 0) {
                             var formObservations = formNames.map(form => {
                                 var formObservation = {};
-                                (getLatestEncounterForForm(observationsValue.filter(item => item.formFieldPath && item.formFieldPath.includes(form)), form).forEach(eachObservation => (formObservation[eachObservation.concept.name] = (isNaN(eachObservation.valueAsString) ? eachObservation.valueAsString : parseFloat(eachObservation.valueAsString)))));
-                                return formObservation
+                                getLatestEncounterForForm(observationsValue.filter(item => item.formFieldPath && item.formFieldPath.includes(form)), form).forEach(eachObservation => {
+                                    const processObservation = (observation) => {
+                                        if (observation.type === "Complex") {
+                                            formObservation[observation.concept.name] = observation.complexData.display;
+                                        } else {
+                                            formObservation[observation.concept.name] = isNaN(observation.valueAsString) ? observation.valueAsString : parseFloat(observation.valueAsString);
+                                        }
+                                    };
+                                    if (eachObservation.groupMembers.length > 0) {
+                                        eachObservation.groupMembers.forEach(eachMembers => {
+                                            processObservation(eachMembers);
+                                        });
+                                    }
+                                    processObservation(eachObservation);
+                                });
+                                return formObservation;
                             });
                             $scope.formFieldValues = formObservations;
-
                         }
                     });
                 }
