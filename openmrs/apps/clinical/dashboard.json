@@ -10,7 +10,7 @@
                 "displayOrder":0,
                 "ageLimit":100,
                 "patientAttributes":[],
-                "additionalPatientIdentifiers": ["ABHA Address","ABHA Number"],
+                "additionalPatientIdentifiers": [],
                 "addressFields":[
                     "address1",
                     "address2",
