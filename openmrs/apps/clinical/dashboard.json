@@ -173,7 +173,8 @@
                     "showDetailsButton":true,
                     "pivotTable":{
                     }
-                }
+                },
+                "hideEmptyDisplayControl":true
             },
             "patientAppointments": {
                 "type": "custom",
@@ -197,7 +198,8 @@
                     ],
                     "showDetailsButton":true,
                     "numberOfVisits":2
-                }
+                },
+                "hideEmptyDisplayControl":true
             },
 
             "forms-2.0": {
