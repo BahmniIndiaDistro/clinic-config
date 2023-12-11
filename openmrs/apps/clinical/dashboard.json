@@ -21,7 +21,7 @@
           "flowsheet": {
             "type": "flowSheet",
             "title": "Vitals Flow Sheet",
-            "displayOrder":12,
+            "displayOrder":7,
             "dashboardConfig": {
               "latestCount": "5",
               "groupBy": "obstime",
@@ -147,7 +147,7 @@
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder":7,
+                "displayOrder":10,
                 "dashboardConfig":{
                     "showDetailsButton":true,
                     "conceptNames":[
@@ -253,7 +253,7 @@
                     "pivotTable":{
                     }
                 },
-                "displayOrder":10,
+                "displayOrder":12,
                 "title":"Patient Document"
             }
         }
