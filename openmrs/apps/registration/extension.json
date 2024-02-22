@@ -65,6 +65,7 @@
                 }
             ],
             "contact": "phoneNumber",
+            "isMiddleNameFieldPresent" : true,
             "addressMap": {
                 "city": "cityVillage",
                 "state": "stateProvince",
