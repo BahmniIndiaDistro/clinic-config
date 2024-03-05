@@ -103,7 +103,7 @@
                     "logo": "../images/bahmniLogo.png"
                 }
             },
-          "radiologyOrders":{
+            "radiologyOrders":{
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
@@ -112,7 +112,7 @@
                   "conceptNames":[],
                   "numberOfVisits":4
                 }
-          },
+            },
 
             "labResults":{
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
@@ -126,10 +126,20 @@
                     "showNormalLabResults": true,
                     "showCommentsExpanded": true,
                     "showAccessionNotes": true,
-                    "showDetailsButton":false
+                    "showDetailsButton": false,
+                    "chartConfig": {
+                        "sortResultColumnsLatestFirst":true,
+                        "groupByPanel":true
+                    }
                 },
                 "expandedViewConfig":{
-                    "numberOfVisits":10
+                    "numberOfVisits":10,
+                    "showChart":true,
+                    "showTable":false,
+                    "chartConfig": {
+                        "sortResultColumnsLatestFirst":true,
+                        "groupByPanel":true
+                    }  
                 }
             },
 
