@@ -7,7 +7,7 @@
         }
     ],
     "config": {
-		"preferExtraIdInSearchResults": true,
+		"preferredExtraIdInPatientList": "ABHA Number",
         "allowAdhocTeleConsultation": true,
         "defaultVisitType":"OPD",
         "teleConsultationDomain": "meet.jit.si",
