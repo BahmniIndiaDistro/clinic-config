@@ -60,6 +60,19 @@
                     "numberOfVisits":5,
                     "showOtherActive":true
                 }
+            },
+            "immunizations":{
+                "translationKey":"DASHBOARD_TITLE_IMMUNIZATIONS_KEY",
+                "type":"observation",
+                "isObservation":true,
+                "displayOrder": 6,
+                "config":{
+                    "conceptNames":[
+                        "Immunization History"
+                    ],
+                    "numberOfVisits":1,
+                    "displayNameType": "FSN"
+                }
             }
         },
         "encounterContext": {
